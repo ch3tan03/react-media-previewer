@@ -42,7 +42,7 @@ const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
         <div className="flex">
           <a
             href={`${currentUrl}?download/${currentUrl.split("/").pop()}`}
-            className="my-auto mx-4 bg-black rounded-full p-2"  download
+            className="my-auto mx-4 bg-black rounded-full p-2" target="_blank" download title="Download"
           >
             <AiOutlineDownload
               size="1.5rem"
@@ -50,6 +50,7 @@ const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
             />
           </a>
           <CopyToClipboard
+            
             text={currentUrl}
             onCopy={() => {
               setCopyed(true);
@@ -58,7 +59,7 @@ const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
               }, 2000);
             }}
           >
-            <a className="my-auto mx-4 bg-black rounded-full p-2">
+            <a className="my-auto mx-4 bg-black rounded-full p-2" title="Copy">
               {copyed ? (
                 <AiOutlineCheck
                   size="1.5rem"
