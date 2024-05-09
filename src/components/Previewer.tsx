@@ -42,7 +42,7 @@ const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
         <div className="flex">
           <a
             href={`${currentUrl}?download/${currentUrl.split("/").pop()}`}
-            className="my-auto mx-4 bg-black rounded-full p-2"  target="_blank"  download
+            className="my-auto mx-4 bg-black rounded-full p-2"  download
           >
             <AiOutlineDownload
               size="1.5rem"
